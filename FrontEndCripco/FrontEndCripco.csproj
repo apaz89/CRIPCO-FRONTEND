@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{037360E3-92D2-4FE5-8649-3A75ABE49371}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FrontEndCripco</RootNamespace>
+    <AssemblyName>FrontEndCripco</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.2\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0.4\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\crossbrowserjs\excanvas.min.js" />
+    <Content Include="assets\crossbrowserjs\html5shiv.js" />
+    <Content Include="assets\crossbrowserjs\respond.min.js" />
+    <Content Include="assets\css\animate.css" />
+    <Content Include="assets\css\animate.min.css" />
+    <Content Include="assets\css\style-responsive.css" />
+    <Content Include="assets\css\style-responsive.min.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\style.min.css" />
+    <Content Include="assets\css\theme\blue.css" />
+    <Content Include="assets\css\theme\default.css" />
+    <Content Include="assets\css\theme\orange.css" />
+    <Content Include="assets\css\theme\purple.css" />
+    <Content Include="assets\css\theme\red.css" />
+    <Content Include="assets\img\2o-Lanzamiento-Sopa-Caracol-Fest-2016--20-.jpg" />
+    <Content Include="assets\img\action-bg.jpg" />
+    <Content Include="assets\img\caceenp-venta-3.jpg" />
+    <Content Include="assets\img\carousel-1.jpg" />
+    <Content Include="assets\img\carousel-2.jpg" />
+    <Content Include="assets\img\carousel-3.jpg" />
+    <Content Include="assets\img\client-bg.jpg" />
+    <Content Include="assets\img\Construccion-2016-10-24--2-.jpg" />
+    <Content Include="assets\img\Construccion-2016-11-13--8-.jpg" />
+    <Content Include="assets\img\content-bg-cover.png" />
+    <Content Include="assets\img\content-bg-cover2.png" />
+    <Content Include="assets\img\cripco-viejo.jpg" />
+    <Content Include="assets\img\CRIPCOTON-2016-reunion-UTH-SPS.jpg" />
+    <Content Include="assets\img\home-bg.jpg" />
+    <Content Include="assets\img\lanzamiento-CRIPCOTON-2013--8-.jpg" />
+    <Content Include="assets\img\Logo-Cripco-Transaparente.png" />
+    <Content Include="assets\img\LOGO-ORIGINAL-850x1152.png" />
+    <Content Include="assets\img\milestone-bg.jpg" />
+    <Content Include="assets\img\orgullo.jpg" />
+    <Content Include="assets\img\quote-bg.jpg" />
+    <Content Include="assets\img\quote.jpg" />
+    <Content Include="assets\img\Unitec-Planos-Cripco-2016A--1-.jpg" />
+    <Content Include="assets\img\user-1.jpg" />
+    <Content Include="assets\img\user-2.jpg" />
+    <Content Include="assets\img\user-3.jpg" />
+    <Content Include="assets\img\Wallpapers1920x1200_172.jpg" />
+    <Content Include="assets\img\work-1.jpg" />
+    <Content Include="assets\img\work-2.jpg" />
+    <Content Include="assets\img\work-3.jpg" />
+    <Content Include="assets\img\work-4.jpg" />
+    <Content Include="assets\img\work-5.jpg" />
+    <Content Include="assets\img\work-6.jpg" />
+    <Content Include="assets\img\work-7.jpg" />
+    <Content Include="assets\img\work-8.jpg" />
+    <Content Include="assets\js\apps.js" />
+    <Content Include="assets\js\apps.min.js" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\plugins\bootstrap\js\npm.js" />
+    <Content Include="assets\plugins\font-awesome\css\font-awesome.css" />
+    <Content Include="assets\plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\plugins\jquery-cookie\jquery.cookie.js" />
+    <Content Include="assets\plugins\jquery\jquery-1.8.2.min.js" />
+    <Content Include="assets\plugins\jquery\jquery-1.9.1.js" />
+    <Content Include="assets\plugins\jquery\jquery-1.9.1.min.js" />
+    <Content Include="assets\plugins\jquery\jquery-migrate-1.1.0.js" />
+    <Content Include="assets\plugins\jquery\jquery-migrate-1.1.0.min.js" />
+    <Content Include="assets\plugins\less\less.min.js" />
+    <Content Include="assets\plugins\pace\docs\lib\color.js" />
+    <Content Include="assets\plugins\pace\docs\lib\themes.js" />
+    <Content Include="assets\plugins\pace\docs\resources\barber-pole-orange.css" />
+    <Content Include="assets\plugins\pace\docs\resources\flash-white.css" />
+    <Content Include="assets\plugins\pace\docs\welcome\index.html" />
+    <Content Include="assets\plugins\pace\pace.js" />
+    <Content Include="assets\plugins\pace\pace.min.js" />
+    <Content Include="assets\plugins\pace\templates\pace-theme-barber-shop.tmpl.css" />
+    <Content Include="assets\plugins\pace\templates\pace-theme-big-counter.tmpl.css" />
+    <Content Include="assets\plugins\pace\templates\pace-theme-bounce.tmpl.css" />
+    <Content Include="assets\plugins\pace\templates\pace-theme-center-atom.tmpl.css" />
+    <Content Include="assets\plugins\pace\templates\pace-theme-center-circle.tmpl.css" />
+    <Content Include="assets\plugins\pace\templates\pace-theme-center-radar.tmpl.css" />
+    <Content Include="assets\plugins\pace\templates\pace-theme-center-simple.tmpl.css" />
+    <Content Include="assets\plugins\pace\templates\pace-theme-corner-indicator.tmpl.css" />
+    <Content Include="assets\plugins\pace\templates\pace-theme-fill-left.tmpl.css" />
+    <Content Include="assets\plugins\pace\templates\pace-theme-flash.tmpl.css" />
+    <Content Include="assets\plugins\pace\templates\pace-theme-flat-top.tmpl.css" />
+    <Content Include="assets\plugins\pace\templates\pace-theme-loading-bar.tmpl.css" />
+    <Content Include="assets\plugins\pace\templates\pace-theme-mac-osx.tmpl.css" />
+    <Content Include="assets\plugins\pace\templates\pace-theme-minimal.tmpl.css" />
+    <Content Include="assets\plugins\pace\tests\demo.html" />
+    <Content Include="assets\plugins\pace\themes\black\pace-theme-barber-shop.css" />
+    <Content Include="assets\plugins\pace\themes\black\pace-theme-big-counter.css" />
+    <Content Include="assets\plugins\pace\themes\black\pace-theme-bounce.css" />
+    <Content Include="assets\plugins\pace\themes\black\pace-theme-center-atom.css" />
+    <Content Include="assets\plugins\pace\themes\black\pace-theme-center-circle.css" />
+    <Content Include="assets\plugins\pace\themes\black\pace-theme-center-radar.css" />
+    <Content Include="assets\plugins\pace\themes\black\pace-theme-center-simple.css" />
+    <Content Include="assets\plugins\pace\themes\black\pace-theme-corner-indicator.css" />
+    <Content Include="assets\plugins\pace\themes\black\pace-theme-fill-left.css" />
+    <Content Include="assets\plugins\pace\themes\black\pace-theme-flash.css" />
+    <Content Include="assets\plugins\pace\themes\black\pace-theme-flat-top.css" />
+    <Content Include="assets\plugins\pace\themes\black\pace-theme-loading-bar.css" />
+    <Content Include="assets\plugins\pace\themes\black\pace-theme-mac-osx.css" />
+    <Content Include="assets\plugins\pace\themes\black\pace-theme-minimal.css" />
+    <Content Include="assets\plugins\pace\themes\blue\pace-theme-barber-shop.css" />
+    <Content Include="assets\plugins\pace\themes\blue\pace-theme-big-counter.css" />
+    <Content Include="assets\plugins\pace\themes\blue\pace-theme-bounce.css" />
+    <Content Include="assets\plugins\pace\themes\blue\pace-theme-center-atom.css" />
+    <Content Include="assets\plugins\pace\themes\blue\pace-theme-center-circle.css" />
+    <Content Include="assets\plugins\pace\themes\blue\pace-theme-center-radar.css" />
+    <Content Include="assets\plugins\pace\themes\blue\pace-theme-center-simple.css" />
+    <Content Include="assets\plugins\pace\themes\blue\pace-theme-corner-indicator.css" />
+    <Content Include="assets\plugins\pace\themes\blue\pace-theme-fill-left.css" />
+    <Content Include="assets\plugins\pace\themes\blue\pace-theme-flash.css" />
+    <Content Include="assets\plugins\pace\themes\blue\pace-theme-flat-top.css" />
+    <Content Include="assets\plugins\pace\themes\blue\pace-theme-loading-bar.css" />
+    <Content Include="assets\plugins\pace\themes\blue\pace-theme-mac-osx.css" />
+    <Content Include="assets\plugins\pace\themes\blue\pace-theme-minimal.css" />
+    <Content Include="assets\plugins\pace\themes\green\pace-theme-barber-shop.css" />
+    <Content Include="assets\plugins\pace\themes\green\pace-theme-big-counter.css" />
+    <Content Include="assets\plugins\pace\themes\green\pace-theme-bounce.css" />
+    <Content Include="assets\plugins\pace\themes\green\pace-theme-center-atom.css" />
+    <Content Include="assets\plugins\pace\themes\green\pace-theme-center-circle.css" />
+    <Content Include="assets\plugins\pace\themes\green\pace-theme-center-radar.css" />
+    <Content Include="assets\plugins\pace\themes\green\pace-theme-center-simple.css" />
+    <Content Include="assets\plugins\pace\themes\green\pace-theme-corner-indicator.css" />
+    <Content Include="assets\plugins\pace\themes\green\pace-theme-fill-left.css" />
+    <Content Include="assets\plugins\pace\themes\green\pace-theme-flash.css" />
+    <Content Include="assets\plugins\pace\themes\green\pace-theme-flat-top.css" />
+    <Content Include="assets\plugins\pace\themes\green\pace-theme-loading-bar.css" />
+    <Content Include="assets\plugins\pace\themes\green\pace-theme-mac-osx.css" />
+    <Content Include="assets\plugins\pace\themes\green\pace-theme-minimal.css" />
+    <Content Include="assets\plugins\pace\themes\orange\pace-theme-barber-shop.css" />
+    <Content Include="assets\plugins\pace\themes\orange\pace-theme-big-counter.css" />
+    <Content Include="assets\plugins\pace\themes\orange\pace-theme-bounce.css" />
+    <Content Include="assets\plugins\pace\themes\orange\pace-theme-center-atom.css" />
+    <Content Include="assets\plugins\pace\themes\orange\pace-theme-center-circle.css" />
+    <Content Include="assets\plugins\pace\themes\orange\pace-theme-center-radar.css" />
+    <Content Include="assets\plugins\pace\themes\orange\pace-theme-center-simple.css" />
+    <Content Include="assets\plugins\pace\themes\orange\pace-theme-corner-indicator.css" />
+    <Content Include="assets\plugins\pace\themes\orange\pace-theme-fill-left.css" />
+    <Content Include="assets\plugins\pace\themes\orange\pace-theme-flash.css" />
+    <Content Include="assets\plugins\pace\themes\orange\pace-theme-flat-top.css" />
+    <Content Include="assets\plugins\pace\themes\orange\pace-theme-loading-bar.css" />
+    <Content Include="assets\plugins\pace\themes\orange\pace-theme-mac-osx.css" />
+    <Content Include="assets\plugins\pace\themes\orange\pace-theme-minimal.css" />
+    <Content Include="assets\plugins\pace\themes\pace-theme-barber-shop.css" />
+    <Content Include="assets\plugins\pace\themes\pace-theme-big-counter.css" />
+    <Content Include="assets\plugins\pace\themes\pace-theme-bounce.css" />
+    <Content Include="assets\plugins\pace\themes\pace-theme-center-atom.css" />
+    <Content Include="assets\plugins\pace\themes\pace-theme-center-circle.css" />
+    <Content Include="assets\plugins\pace\themes\pace-theme-center-radar.css" />
+    <Content Include="assets\plugins\pace\themes\pace-theme-center-simple.css" />
+    <Content Include="assets\plugins\pace\themes\pace-theme-corner-indicator.css" />
+    <Content Include="assets\plugins\pace\themes\pace-theme-fill-left.css" />
+    <Content Include="assets\plugins\pace\themes\pace-theme-flash.css" />
+    <Content Include="assets\plugins\pace\themes\pace-theme-flat-top.css" />
+    <Content Include="assets\plugins\pace\themes\pace-theme-loading-bar.css" />
+    <Content Include="assets\plugins\pace\themes\pace-theme-mac-osx.css" />
+    <Content Include="assets\plugins\pace\themes\pace-theme-minimal.css" />
+    <Content Include="assets\plugins\pace\themes\pink\pace-theme-barber-shop.css" />
+    <Content Include="assets\plugins\pace\themes\pink\pace-theme-big-counter.css" />
+    <Content Include="assets\plugins\pace\themes\pink\pace-theme-bounce.css" />
+    <Content Include="assets\plugins\pace\themes\pink\pace-theme-center-atom.css" />
+    <Content Include="assets\plugins\pace\themes\pink\pace-theme-center-circle.css" />
+    <Content Include="assets\plugins\pace\themes\pink\pace-theme-center-radar.css" />
+    <Content Include="assets\plugins\pace\themes\pink\pace-theme-center-simple.css" />
+    <Content Include="assets\plugins\pace\themes\pink\pace-theme-corner-indicator.css" />
+    <Content Include="assets\plugins\pace\themes\pink\pace-theme-fill-left.css" />
+    <Content Include="assets\plugins\pace\themes\pink\pace-theme-flash.css" />
+    <Content Include="assets\plugins\pace\themes\pink\pace-theme-flat-top.css" />
+    <Content Include="assets\plugins\pace\themes\pink\pace-theme-loading-bar.css" />
+    <Content Include="assets\plugins\pace\themes\pink\pace-theme-mac-osx.css" />
+    <Content Include="assets\plugins\pace\themes\pink\pace-theme-minimal.css" />
+    <Content Include="assets\plugins\pace\themes\purple\pace-theme-barber-shop.css" />
+    <Content Include="assets\plugins\pace\themes\purple\pace-theme-big-counter.css" />
+    <Content Include="assets\plugins\pace\themes\purple\pace-theme-bounce.css" />
+    <Content Include="assets\plugins\pace\themes\purple\pace-theme-center-atom.css" />
+    <Content Include="assets\plugins\pace\themes\purple\pace-theme-center-circle.css" />
+    <Content Include="assets\plugins\pace\themes\purple\pace-theme-center-radar.css" />
+    <Content Include="assets\plugins\pace\themes\purple\pace-theme-center-simple.css" />
+    <Content Include="assets\plugins\pace\themes\purple\pace-theme-corner-indicator.css" />
+    <Content Include="assets\plugins\pace\themes\purple\pace-theme-fill-left.css" />
+    <Content Include="assets\plugins\pace\themes\purple\pace-theme-flash.css" />
+    <Content Include="assets\plugins\pace\themes\purple\pace-theme-flat-top.css" />
+    <Content Include="assets\plugins\pace\themes\purple\pace-theme-loading-bar.css" />
+    <Content Include="assets\plugins\pace\themes\purple\pace-theme-mac-osx.css" />
+    <Content Include="assets\plugins\pace\themes\purple\pace-theme-minimal.css" />
+    <Content Include="assets\plugins\pace\themes\red\pace-theme-barber-shop.css" />
+    <Content Include="assets\plugins\pace\themes\red\pace-theme-big-counter.css" />
+    <Content Include="assets\plugins\pace\themes\red\pace-theme-bounce.css" />
+    <Content Include="assets\plugins\pace\themes\red\pace-theme-center-atom.css" />
+    <Content Include="assets\plugins\pace\themes\red\pace-theme-center-circle.css" />
+    <Content Include="assets\plugins\pace\themes\red\pace-theme-center-radar.css" />
+    <Content Include="assets\plugins\pace\themes\red\pace-theme-center-simple.css" />
+    <Content Include="assets\plugins\pace\themes\red\pace-theme-corner-indicator.css" />
+    <Content Include="assets\plugins\pace\themes\red\pace-theme-fill-left.css" />
+    <Content Include="assets\plugins\pace\themes\red\pace-theme-flash.css" />
+    <Content Include="assets\plugins\pace\themes\red\pace-theme-flat-top.css" />
+    <Content Include="assets\plugins\pace\themes\red\pace-theme-loading-bar.css" />
+    <Content Include="assets\plugins\pace\themes\red\pace-theme-mac-osx.css" />
+    <Content Include="assets\plugins\pace\themes\red\pace-theme-minimal.css" />
+    <Content Include="assets\plugins\pace\themes\silver\pace-theme-barber-shop.css" />
+    <Content Include="assets\plugins\pace\themes\silver\pace-theme-big-counter.css" />
+    <Content Include="assets\plugins\pace\themes\silver\pace-theme-bounce.css" />
+    <Content Include="assets\plugins\pace\themes\silver\pace-theme-center-atom.css" />
+    <Content Include="assets\plugins\pace\themes\silver\pace-theme-center-circle.css" />
+    <Content Include="assets\plugins\pace\themes\silver\pace-theme-center-radar.css" />
+    <Content Include="assets\plugins\pace\themes\silver\pace-theme-center-simple.css" />
+    <Content Include="assets\plugins\pace\themes\silver\pace-theme-corner-indicator.css" />
+    <Content Include="assets\plugins\pace\themes\silver\pace-theme-fill-left.css" />
+    <Content Include="assets\plugins\pace\themes\silver\pace-theme-flash.css" />
+    <Content Include="assets\plugins\pace\themes\silver\pace-theme-flat-top.css" />
+    <Content Include="assets\plugins\pace\themes\silver\pace-theme-loading-bar.css" />
+    <Content Include="assets\plugins\pace\themes\silver\pace-theme-mac-osx.css" />
+    <Content Include="assets\plugins\pace\themes\silver\pace-theme-minimal.css" />
+    <Content Include="assets\plugins\pace\themes\white\pace-theme-barber-shop.css" />
+    <Content Include="assets\plugins\pace\themes\white\pace-theme-big-counter.css" />
+    <Content Include="assets\plugins\pace\themes\white\pace-theme-bounce.css" />
+    <Content Include="assets\plugins\pace\themes\white\pace-theme-center-atom.css" />
+    <Content Include="assets\plugins\pace\themes\white\pace-theme-center-circle.css" />
+    <Content Include="assets\plugins\pace\themes\white\pace-theme-center-radar.css" />
+    <Content Include="assets\plugins\pace\themes\white\pace-theme-center-simple.css" />
+    <Content Include="assets\plugins\pace\themes\white\pace-theme-corner-indicator.css" />
+    <Content Include="assets\plugins\pace\themes\white\pace-theme-fill-left.css" />
+    <Content Include="assets\plugins\pace\themes\white\pace-theme-flash.css" />
+    <Content Include="assets\plugins\pace\themes\white\pace-theme-flat-top.css" />
+    <Content Include="assets\plugins\pace\themes\white\pace-theme-loading-bar.css" />
+    <Content Include="assets\plugins\pace\themes\white\pace-theme-mac-osx.css" />
+    <Content Include="assets\plugins\pace\themes\white\pace-theme-minimal.css" />
+    <Content Include="assets\plugins\pace\themes\yellow\pace-theme-barber-shop.css" />
+    <Content Include="assets\plugins\pace\themes\yellow\pace-theme-big-counter.css" />
+    <Content Include="assets\plugins\pace\themes\yellow\pace-theme-bounce.css" />
+    <Content Include="assets\plugins\pace\themes\yellow\pace-theme-center-atom.css" />
+    <Content Include="assets\plugins\pace\themes\yellow\pace-theme-center-circle.css" />
+    <Content Include="assets\plugins\pace\themes\yellow\pace-theme-center-radar.css" />
+    <Content Include="assets\plugins\pace\themes\yellow\pace-theme-center-simple.css" />
+    <Content Include="assets\plugins\pace\themes\yellow\pace-theme-corner-indicator.css" />
+    <Content Include="assets\plugins\pace\themes\yellow\pace-theme-fill-left.css" />
+    <Content Include="assets\plugins\pace\themes\yellow\pace-theme-flash.css" />
+    <Content Include="assets\plugins\pace\themes\yellow\pace-theme-flat-top.css" />
+    <Content Include="assets\plugins\pace\themes\yellow\pace-theme-loading-bar.css" />
+    <Content Include="assets\plugins\pace\themes\yellow\pace-theme-mac-osx.css" />
+    <Content Include="assets\plugins\pace\themes\yellow\pace-theme-minimal.css" />
+    <Content Include="assets\plugins\scrollMonitor\demos\fixed.html" />
+    <Content Include="assets\plugins\scrollMonitor\demos\list.html" />
+    <Content Include="assets\plugins\scrollMonitor\demos\scoreboard.html" />
+    <Content Include="assets\plugins\scrollMonitor\demos\stress.html" />
+    <Content Include="assets\plugins\scrollMonitor\MIT-LICENSE.txt" />
+    <Content Include="assets\plugins\scrollMonitor\scrollMonitor.js" />
+    <Content Include="BD\DBCRIPCO.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBCRIPCO.edmx</DependentUpon>
+      <LastGenOutput>DBCRIPCO.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BD\DBCRIPCO.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBCRIPCO.edmx</DependentUpon>
+      <LastGenOutput>DBCRIPCO.cs</LastGenOutput>
+    </Content>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <EntityDeploy Include="BD\DBCRIPCO.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBCRIPCO.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="BD\DBCRIPCO.edmx.diagram">
+      <DependentUpon>DBCRIPCO.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.0.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BootstrapBundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BD\CmsArticulo.cs">
+      <DependentUpon>DBCRIPCO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\CmsArticulosDetalle.cs">
+      <DependentUpon>DBCRIPCO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\DBCRIPCO.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBCRIPCO.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\DBCRIPCO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBCRIPCO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\DBCRIPCO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBCRIPCO.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CmsArticulosModels.cs" />
+    <Compile Include="Models\DetalleArticuloModels.cs" />
+    <Compile Include="Models\TreeNodeModels .cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="assets\less\bootstrap\alerts.less" />
+    <Content Include="assets\less\bootstrap\badges.less" />
+    <Content Include="assets\less\bootstrap\bootstrap.less" />
+    <Content Include="assets\less\bootstrap\breadcrumbs.less" />
+    <Content Include="assets\less\bootstrap\button-groups.less" />
+    <Content Include="assets\less\bootstrap\buttons.less" />
+    <Content Include="assets\less\bootstrap\carousel.less" />
+    <Content Include="assets\less\bootstrap\close.less" />
+    <Content Include="assets\less\bootstrap\code.less" />
+    <Content Include="assets\less\bootstrap\component-animations.less" />
+    <Content Include="assets\less\bootstrap\dropdowns.less" />
+    <Content Include="assets\less\bootstrap\forms.less" />
+    <Content Include="assets\less\bootstrap\glyphicons.less" />
+    <Content Include="assets\less\bootstrap\grid.less" />
+    <Content Include="assets\less\bootstrap\input-groups.less" />
+    <Content Include="assets\less\bootstrap\jumbotron.less" />
+    <Content Include="assets\less\bootstrap\labels.less" />
+    <Content Include="assets\less\bootstrap\list-group.less" />
+    <Content Include="assets\less\bootstrap\media.less" />
+    <Content Include="assets\less\bootstrap\mixins.less" />
+    <Content Include="assets\less\bootstrap\mixins\alerts.less" />
+    <Content Include="assets\less\bootstrap\mixins\background-variant.less" />
+    <Content Include="assets\less\bootstrap\mixins\border-radius.less" />
+    <Content Include="assets\less\bootstrap\mixins\buttons.less" />
+    <Content Include="assets\less\bootstrap\mixins\center-block.less" />
+    <Content Include="assets\less\bootstrap\mixins\clearfix.less" />
+    <Content Include="assets\less\bootstrap\mixins\forms.less" />
+    <Content Include="assets\less\bootstrap\mixins\gradients.less" />
+    <Content Include="assets\less\bootstrap\mixins\grid-framework.less" />
+    <Content Include="assets\less\bootstrap\mixins\grid.less" />
+    <Content Include="assets\less\bootstrap\mixins\hide-text.less" />
+    <Content Include="assets\less\bootstrap\mixins\image.less" />
+    <Content Include="assets\less\bootstrap\mixins\labels.less" />
+    <Content Include="assets\less\bootstrap\mixins\list-group.less" />
+    <Content Include="assets\less\bootstrap\mixins\nav-divider.less" />
+    <Content Include="assets\less\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="assets\less\bootstrap\mixins\opacity.less" />
+    <Content Include="assets\less\bootstrap\mixins\pagination.less" />
+    <Content Include="assets\less\bootstrap\mixins\panels.less" />
+    <Content Include="assets\less\bootstrap\mixins\progress-bar.less" />
+    <Content Include="assets\less\bootstrap\mixins\reset-filter.less" />
+    <Content Include="assets\less\bootstrap\mixins\reset-text.less" />
+    <Content Include="assets\less\bootstrap\mixins\resize.less" />
+    <Content Include="assets\less\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="assets\less\bootstrap\mixins\size.less" />
+    <Content Include="assets\less\bootstrap\mixins\tab-focus.less" />
+    <Content Include="assets\less\bootstrap\mixins\table-row.less" />
+    <Content Include="assets\less\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="assets\less\bootstrap\mixins\text-overflow.less" />
+    <Content Include="assets\less\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="assets\less\bootstrap\modals.less" />
+    <Content Include="assets\less\bootstrap\navbar.less" />
+    <Content Include="assets\less\bootstrap\navs.less" />
+    <Content Include="assets\less\bootstrap\normalize.less" />
+    <Content Include="assets\less\bootstrap\pager.less" />
+    <Content Include="assets\less\bootstrap\pagination.less" />
+    <Content Include="assets\less\bootstrap\panels.less" />
+    <Content Include="assets\less\bootstrap\popovers.less" />
+    <Content Include="assets\less\bootstrap\print.less" />
+    <Content Include="assets\less\bootstrap\progress-bars.less" />
+    <Content Include="assets\less\bootstrap\responsive-embed.less" />
+    <Content Include="assets\less\bootstrap\responsive-utilities.less" />
+    <Content Include="assets\less\bootstrap\scaffolding.less" />
+    <Content Include="assets\less\bootstrap\tables.less" />
+    <Content Include="assets\less\bootstrap\theme.less" />
+    <Content Include="assets\less\bootstrap\thumbnails.less" />
+    <Content Include="assets\less\bootstrap\tooltip.less" />
+    <Content Include="assets\less\bootstrap\type.less" />
+    <Content Include="assets\less\bootstrap\utilities.less" />
+    <Content Include="assets\less\bootstrap\variables.less" />
+    <Content Include="assets\less\bootstrap\wells.less" />
+    <Content Include="assets\less\components\_alert_note.less" />
+    <Content Include="assets\less\components\_badge_label.less" />
+    <Content Include="assets\less\components\_button.less" />
+    <Content Include="assets\less\components\_carousel.less" />
+    <Content Include="assets\less\components\_dropdown_menu.less" />
+    <Content Include="assets\less\components\_form_elements.less" />
+    <Content Include="assets\less\components\_jumbotron.less" />
+    <Content Include="assets\less\components\_list_group.less" />
+    <Content Include="assets\less\components\_list_group_item.less" />
+    <Content Include="assets\less\components\_media_object.less" />
+    <Content Include="assets\less\components\_modal.less" />
+    <Content Include="assets\less\components\_nav_tab.less" />
+    <Content Include="assets\less\components\_pagination.less" />
+    <Content Include="assets\less\components\_panel.less" />
+    <Content Include="assets\less\components\_progress_bar.less" />
+    <Content Include="assets\less\components\_table.less" />
+    <Content Include="assets\less\components\_theme_panel.less" />
+    <Content Include="assets\less\components\_tooltip.less" />
+    <Content Include="assets\less\components\_well.less" />
+    <Content Include="assets\less\page-section\_about_us.less" />
+    <Content Include="assets\less\page-section\_action_box.less" />
+    <Content Include="assets\less\page-section\_home.less" />
+    <Content Include="assets\less\page-section\_pricing.less" />
+    <Content Include="assets\less\page-section\_quote.less" />
+    <Content Include="assets\less\page-section\_service.less" />
+    <Content Include="assets\less\page-section\_team.less" />
+    <Content Include="assets\less\page-section\_testimonial.less" />
+    <Content Include="assets\less\page-section\_work.less" />
+    <Content Include="assets\less\style.less" />
+    <Content Include="assets\less\theme\_blue.less" />
+    <Content Include="assets\less\theme\_default.less" />
+    <Content Include="assets\less\theme\_orange.less" />
+    <Content Include="assets\less\theme\_purple.less" />
+    <Content Include="assets\less\theme\_red.less" />
+    <Content Include="assets\less\_component_list.less" />
+    <Content Include="assets\less\_content.less" />
+    <Content Include="assets\less\_footer.less" />
+    <Content Include="assets\less\_header.less" />
+    <Content Include="assets\less\_helper.less" />
+    <Content Include="assets\less\_mixins.less" />
+    <Content Include="assets\less\_pace_loader.less" />
+    <Content Include="assets\less\_page_section_list.less" />
+    <Content Include="assets\less\_page_setting.less" />
+    <Content Include="assets\less\_responsive.less" />
+    <Content Include="assets\less\_variable.less" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\plugins\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="assets\plugins\font-awesome\less\animated.less" />
+    <Content Include="assets\plugins\font-awesome\less\bordered-pulled.less" />
+    <Content Include="assets\plugins\font-awesome\less\core.less" />
+    <Content Include="assets\plugins\font-awesome\less\fixed-width.less" />
+    <Content Include="assets\plugins\font-awesome\less\font-awesome.less" />
+    <Content Include="assets\plugins\font-awesome\less\icons.less" />
+    <Content Include="assets\plugins\font-awesome\less\larger.less" />
+    <Content Include="assets\plugins\font-awesome\less\list.less" />
+    <Content Include="assets\plugins\font-awesome\less\mixins.less" />
+    <Content Include="assets\plugins\font-awesome\less\path.less" />
+    <Content Include="assets\plugins\font-awesome\less\rotated-flipped.less" />
+    <Content Include="assets\plugins\font-awesome\less\screen-reader.less" />
+    <Content Include="assets\plugins\font-awesome\less\stacked.less" />
+    <Content Include="assets\plugins\font-awesome\less\variables.less" />
+    <Content Include="assets\plugins\font-awesome\scss\font-awesome.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_animated.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_core.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_icons.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_larger.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_list.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_mixins.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_path.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_stacked.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_variables.scss" />
+    <Content Include="assets\plugins\pace\.hsdoc" />
+    <Content Include="assets\plugins\pace\bower.json" />
+    <Content Include="assets\plugins\pace\docs\intro.md" />
+    <Content Include="assets\plugins\pace\docs\lib\themes.coffee" />
+    <Content Include="assets\plugins\pace\docs\resources\templates\index.jade" />
+    <Content Include="assets\plugins\pace\docs\resources\templates\page.jade" />
+    <Content Include="assets\plugins\pace\Gruntfile.coffee" />
+    <Content Include="assets\plugins\pace\install.json" />
+    <Content Include="assets\plugins\pace\LICENSE" />
+    <Content Include="assets\plugins\pace\pace.coffee" />
+    <Content Include="assets\plugins\pace\package.json" />
+    <Content Include="assets\plugins\pace\README.md" />
+    <Content Include="assets\plugins\scrollMonitor\bower.json" />
+    <Content Include="assets\plugins\scrollMonitor\demos\listdata.json" />
+    <Content Include="assets\plugins\scrollMonitor\package.json" />
+    <Content Include="assets\plugins\scrollMonitor\README.md" />
+    <Content Include="Scripts\jquery-1.9.0.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2483</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2483/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

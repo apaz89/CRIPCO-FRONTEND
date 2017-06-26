@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GCModelStoreContainer" CdmEntityContainer="GCEntities">
+    <EntitySetMapping Name="CmsArticulos">
+      <EntityTypeMapping TypeName="GCModel.CmsArticulo">
+        <MappingFragment StoreEntitySet="CmsArticulos">
+          <ScalarProperty Name="ArticuloId" ColumnName="ArticuloId" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="PadreArticuloId" ColumnName="PadreArticuloId" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CmsArticulosDetalles">
+      <EntityTypeMapping TypeName="GCModel.CmsArticulosDetalle">
+        <MappingFragment StoreEntitySet="CmsArticulosDetalle">
+          <ScalarProperty Name="ArticuloDetalleId" ColumnName="ArticuloDetalleId" />
+          <ScalarProperty Name="ArticuloId" ColumnName="ArticuloId" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="UrlVideo" ColumnName="UrlVideo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CmsArticulos">
+    <Key>
+      <PropertyRef Name="ArticuloId" />
+    </Key>
+    <Property Name="ArticuloId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PadreArticuloId" Type="int" Nullable="false" />
+    <Property Name="Tipo" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CmsArticulosDetalle">
+    <Key>
+      <PropertyRef Name="ArticuloDetalleId" />
+    </Key>
+    <Property Name="ArticuloDetalleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ArticuloId" Type="int" Nullable="false" />
+    <Property Name="Imagen" Type="image" />
+    <Property Name="UrlVideo" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <Association Name="FK_CmsArticulosDetalle_CmsArticulos">
+    <End Role="CmsArticulos" Type="Self.CmsArticulos" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CmsArticulosDetalle" Type="Self.CmsArticulosDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CmsArticulos">
+        <PropertyRef Name="ArticuloId" />
+      </Principal>
+      <Dependent Role="CmsArticulosDetalle">
+        <PropertyRef Name="ArticuloId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GCModelStoreContainer">
+    <EntitySet Name="CmsArticulos" EntityType="Self.CmsArticulos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CmsArticulosDetalle" EntityType="Self.CmsArticulosDetalle" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CmsArticulosDetalle_CmsArticulos" Association="Self.FK_CmsArticulosDetalle_CmsArticulos">
+      <End Role="CmsArticulos" EntitySet="CmsArticulos" />
+      <End Role="CmsArticulosDetalle" EntitySet="CmsArticulosDetalle" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

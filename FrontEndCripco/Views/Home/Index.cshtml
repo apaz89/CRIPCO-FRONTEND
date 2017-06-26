@@ -1,0 +1,250 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+ <!-- begin #header -->
+<div id="header" class="header navbar navbar-transparent navbar-fixed-top">
+    <!-- begin container -->
+    <div class="container">
+        <!-- begin navbar-header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">
+                <span class="brand-text">
+                    <img src="~/assets/img/Logo-Cripco-Transaparente.png" alt="CRIPCO logo" width="10%">
+                    <span class="text-theme">CRIP</span>CO
+                </span>
+            </a>
+        </div>
+        <!-- end navbar-header -->
+        <!-- begin navbar-collapse -->
+        <div class="collapse navbar-collapse" id="header-navbar">
+            <aside class="nav navbar-nav navbar-left">
+               
+               
+                
+                @*<li class="active dropdown">
+                    <a href="#home" data-click="scroll-to-target" data-toggle="dropdown">ACTIVIDADES <b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-menu-right animated fadeInDown">
+                        
+                        <li class="active dropdown">
+                            <a href="#home" data-click="scroll-to-target" data-toggle="dropdown">ACTIVIDADES GLES 2017 <b class="caret"></b></a>
+                            <ul class="dropdown-menu dropdown-menu-left animated fadeInLeft">
+                                <li><a href="#">MARATONES</a></li>
+                                <li><a href="#">INAGURACION EDIFICIO</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="active dropdown">
+                            <a href="#home" data-click="scroll-to-target" data-toggle="dropdown">ACTIVIDADES GLES 2017 <b class="caret"></b></a>
+                            <ul class="dropdown-menu dropdown-menu-left animated fadeInLeft">
+                                <li><a href="#">MARATONES OKO</a></li>
+                                <li><a href="#">CONFERENCIA OKO</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>*@
+               
+                @Html.Raw(ViewBag.Tree);
+
+                <li><a href="#about" data-click="scroll-to-target">QUIENES SOMOS</a></li>               
+                
+                 <li><a href="#contact" data-click="scroll-to-target">CONTACTENOS</a></li>
+            </aside>
+        </div>
+        <!-- end navbar-collapse -->
+    </div>
+    <!-- end container -->
+</div>
+<!-- end #header -->
+
+
+<!-- begin #home -->
+<div id="home" class="content has-bg home">
+    <!-- begin content-bg -->
+    <div class="content-bg">
+        <img src="~/assets/img/Wallpapers1920x1200_172.jpg" alt="Home" />
+    </div>
+    <!-- end content-bg -->
+    <!-- begin container -->
+    <div class="container home-content">
+        <h1>SOBRE CRIPCO</h1>
+        <h5>
+            El Centro de Rehabilitación Integral de Puerto Cortés (CRIPCO) no ha nombrado oficialmente representante alguno en otro país. En adición de la Junta Directiva, Juventud Cripco, staff y personal del Centro de Rehabilitación Integral de Puerto Cortés, hay
+            colaboradores, asesores y voluntarios que ayudan a CRIPCO, y algunos de estos nobles colaboradores residen en Honduras, fuera del Municipio de Puerto Cortés y un pequeño grupo residen fuera de Honduras. Los nombres de muchos de estos
+            colaboradores no los mencionamos porque así lo han solicitado. ¡Que Dios bendiga a estas nobles almas caritativas que colaboran con la Causa de CRIPCO!
+
+        </h5>>
+        <h1>NOTICIAS</h1>
+    </div>
+    <!-- end container -->
+</div>
+<!-- end #home -->
+<!-- begin #about -->
+<div id="about" class="content" data-scrollview="true">
+    <!-- begin container -->
+    <div class="container" data-animation="true" data-animation-type="fadeInDown">
+        <h2 class="content-title">QUIENES SOMOS</h2>
+        <p class="content-desc">
+        </p>
+        <!-- begin row -->
+        <div class="row">
+            <!-- begin col-4 -->
+            <div class="col-md-4 col-sm-6">
+                <!-- begin about -->
+                <div class="about">
+                    <h3>VISION</h3>
+                    <p>
+                        Proveer servicios de rehabilitación física, mental y emocional a los habitantes del municipio de Puerto Cortés y sus alrededores, con especial énfasis en las personas de escasos recursos económicos, procurando que el servicio sea de calidad.
+
+                    </p>
+                </div>
+                <!-- end about -->
+            </div>
+            <!-- end col-4 -->
+            <!-- begin col-4 -->
+            <div class="col-md-4 col-sm-6">
+                <h3>HISTORIA</h3>
+                <!-- begin about-author -->
+                <div class="VISION">
+                    <i class="fa fa-quote-left"></i>
+                    <p>
+                        El Club Rotario de Puerto Cortés en el año 2007, gracias al Club Rotario de Puerto Cortes se desarrollaba la TELETON en nuestra ciudad. En el año 2008, el Club Rotario de Puerto Cortés nombró al Ing. Denis Santiago Ramos Rodríguez
+                        como encargado del evento de la Teletón. En el año 2009, gracias al Club Rotario de Puerto Cortés y voluntarios y en el segundo año a cargo del ing Denis Santiago Ramos Rodríguez, el comité logró superar significativamente
+                        la meta del año anterior, por ese motivo el comité recibió un premio de parte de Teletón. 
+                        de Teletón en Puerto Cortés para manejarlo nosotros mismos.<br />
+                    </p>
+                </div>
+                <div class="info">
+
+                </div>
+                <!-- end about-author -->
+            </div>
+            <!-- end col-4 -->
+            <!-- begin col-4 -->
+            <div class="col-md-4 col-sm-12">
+                <h3>MISION</h3>
+                <p>
+                    Brindar al paciente atención de calidad y calidez para lograr adecuarlo al proceso de rehabilitación física y mental, de manera gratuita.<br />
+                </p>>
+            </div>
+            <!-- end col-4 -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</div>
+<!-- end #about -->
+<!-- begin #milestone -->
+<div id="milestone" class="content bg-black-darker has-bg" data-scrollview="true">
+    <!-- begin content-bg -->
+    <div class="content-bg">
+        <img src="~/assets/img/milestone-bg.jpg" alt="Milestone" />
+    </div>
+    <!-- end content-bg -->
+    <!-- begin container -->
+    <!-- end container -->
+</div>
+<!-- end #milestone -->
+<!-- begin #team -->
+<div id="team" class="content" data-scrollview="true">
+    <!-- begin container -->
+    <div class="container">
+        <h2 class="content-title">JUNTA DIRECIVA</h2>
+        <p class="content-desc">
+            <h5 class="content-center">PRESIDENTE</h5>
+        <P class="center-block">Norma Lizeth Romero Martínez v. de Carranza</P>
+        <h5 class="content-center">VICE PRESIDENTE</h5>
+        <P class="center-block">Doris Evelia Altamirano Mairena</P>
+        <h5 class="content-center">SECRETARIA</h5>
+        <P class="center-block">Lourdes Vanessa Aguilera Cruz </P>
+        <h5 class="content-center">TESORERO</h5>
+        <P class="center-block">Dilsia María Calderón Orellana</P>
+        <h5 class="content-center">FISCAL</h5>
+        <P class="center-block">Gustavo Adolfo Chirinos Solórzano</P>
+        <h5 class="content-center">VOCALES</h5>
+        <P class="center-block">Marco Aurelio Matamoros Rodríguez</P>
+        <P class="center-block"> Raúl Antonio Roque Mejía</P>
+        <P class="center-block"> Fermín Chong Wong</P>
+        <P class="center-block"> Rina Magaly Barahona Vargas</P>
+        <P class="center-block"> Fernando Henríquez Barrera</P>
+        <P class="center-block">Fredy Mauricio Contreras Reyes</P>
+        <P class="center-block"> Roberto de Jesús Contreras Escobar</P>
+        <P class="center-block">Hernán Canales David</P>
+        </p>
+
+        <h2 class="content-title">Asesores</h2>
+        <p class="content-desc">
+            <h5 class="content-center">Reina Emelina López E</h5>
+            <h5 class="content-center">Reyna Virginia Alvarado Barahona</h5>
+            <h5 class="content-center">Denis Santiago Ramos Rodríguez</h5>
+            <h5 class="content-center">Jerson Rodrigo Miranda Martínez</h5>
+            <h5 class="content-center">El siempre recordado Asesor Juan Ramón Fúnez Martínez (R.I.P.)</h5>
+        </p>
+
+        <h2 class="content-title">Colaboradores</h2>
+        <p class="content-desc">
+            <h5 class="content-center"> Ramón Antonio Salvadó Penman</h5>
+            <h5 class="content-center">Daisy Melgar</h5>
+            <h5 class="content-center">Delmis Salgado</h5>
+            <h5 class="content-center">María Luisa Chong Wong</h5>
+            <h5 class="content-center">Mary Jane Turcios</h5>
+            <h5 class="content-center">Natividad Mairena Reyes</h5>
+            <h5 class="content-center">Natividad Mairena Reyes</h5>
+            <h5 class="content-center">Pamela Margarita Munguía Ramos</h5>
+            <h5 class="content-center">Rina Patricia Palma</h5>
+            <h5 class="content-center">Sara Ondina Suazo López</h5>
+            <h5 class="content-center">José Francisco Rivera</h5>
+            <h5 class="content-center">Marlom Jaime Tovar Zelaya</h5>
+        </p>
+        <h2 class="content-title">Staff Médico de CRIPCO</h2>
+        <p class="content-desc">
+            <h5 class="content-center">Dra. Doris Evelia Altamirano Mairena</h5>
+            <h5 class="content-center">Dra. Carmen Elena Salvadó Penman</h5>
+            <h5 class="content-center">Dra. Dolores Hernández de Matamoros</h5>
+            <h5 class="content-center">Dr. Marco Aurelio Matamoros Rodríguez</h5>
+        </p>
+        <h2 class="content-title">Personal de CRIPCO</h2>
+        <p class="content-desc">
+
+
+
+            <h5 class="content-center"> Asistente Administrativo:</h5>
+        <P class="center-block">Licenciada Gisela Enid Vásquez Padilla</P>
+        <h5 class="content-center">Coordinadora Terapia Física:</h5>
+        <P class="center-block">Licenciada Karla Emelina Jaime </P>
+        <h5 class="content-center">Terapeuta Física:</h5>
+        <P class="center-block">Licenciada Mayra Susana Alvarado Morán</P>
+        <P class="center-block">Licenciada Carolina Paguada Velásquez</P>
+        <P class="center-block">Licenciada Ligia Graciela Vicente Rochez</P>
+        <h5 class="content-center">Terapeuta Lenguaje:</h5>
+        <P class="center-block">Licenciada Brenda Yessenia Diaz Molina</P>
+
+        </p>
+        <!-- begin row -->
+        <div class="row">
+            <!-- begin col-4 -->
+            <div class="col-md-4 col-sm-4">
+            </div>
+            <!-- end col-4 -->
+            <!-- begin col-4 -->
+            <div class="col-md-4 col-sm-4">
+            </div>
+            <!-- end col-4 -->
+            <!-- begin col-4 -->
+            <div class="col-md-4 col-sm-4">
+            </div>
+            <!-- end col-4 -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</div>
+<!-- end #team -->
