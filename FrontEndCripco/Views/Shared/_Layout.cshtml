@@ -42,6 +42,32 @@
     <script src="~/assets/plugins/jquery-cookie/jquery.cookie.js"></script>
     <script src="~/assets/plugins/scrollMonitor/scrollMonitor.js"></script>
     <script src="~/assets/js/apps.min.js"></script>
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+    function CargarImagen() {
+        var files = $("#inputFile").get(0).files;
+        var data = new FormData();
+        for (i = 0; i < files.length; i++) {
+            data.append("file" + i, files[i]);
+        }
+        $.ajax({
+            type: "POST",
+            url: "/api/file",
+            contentType: false,
+            processData: false,
+            data: data,
+            success: function (data) {
+                $("#ImgCarga").attr("src", "data:text/plain;base64," + data);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert('error');
+            }
+        });
+    }
+
+    </script>
+
     <!-- ================== END BASE JS ================== -->
     <script>
         $(document).ready(function () {

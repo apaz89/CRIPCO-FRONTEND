@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using FrontEndCripco.Models;
+using System.Data;
+using System.Data.Entity;
 using FrontEndCripco.BD;
 
 namespace FrontEndCripco.assets
@@ -63,14 +65,14 @@ namespace FrontEndCripco.assets
                     }
                     else
                     {
-                        root_li += "<li><a href = \"#\">" + item.ArticuloName.ToUpper() + "</a></li>";
+                        root_li += "<li><a href = \"#"+ item.ArticuloId + "\">" + item.ArticuloName.ToUpper() + "</a></li>";
                     }
                     
                     root_li += "</ul></li>";
                 }
                 else
                 {
-                    root_li += "<li><a href=\"#\"> " + item.ArticuloName.ToUpper() + "</a></li>";
+                    root_li += "<li><a href = \"#" + item.ArticuloId + "\">" + item.ArticuloName.ToUpper() + "</a></li>";
                 }
             }
         }
@@ -108,7 +110,25 @@ namespace FrontEndCripco.assets
         public ActionResult Index()
         {
             ViewBag.Tree = GetAllCategoriesForTree();
-            return View();
+            var cmsArticulosModels = new List<CmsArticulosModels>();
+            var cmsArticulos = db.CmsArticulos.Include(x => x.CmsArticulosDetalles).ToList();
+            foreach (var art in cmsArticulos)
+            {
+                if (art.Tipo.Trim() != "M")
+                {
+                    var detalle = new List<DetalleArticuloModels>();
+                    foreach(var det in art.CmsArticulosDetalles)
+                    {
+                        string base64String = Convert.ToBase64String(det.Imagen);
+                        detalle.Add(new DetalleArticuloModels { ArticuloDetalleId = det.ArticuloDetalleId, ArticuloId = det.ArticuloId, Imagen = base64String });
+                    }
+
+                    cmsArticulosModels.Add(new CmsArticulosModels { ArticuloId=art.ArticuloId, ArticuloName=art.Titulo, Descripcion=art.Descripcion, detalleArticuloModels= detalle });
+                }
+            }
+
+            return View(cmsArticulosModels);
         }
+        
     }
 }
